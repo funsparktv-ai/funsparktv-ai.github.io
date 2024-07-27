@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #2c3e50;
+            color: #ecf0f1;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #34495e;
+            color: #ecf0f1;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background: #2980b9;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #ecf0f1;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #3498db;
+        }
+
+        .container {
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about, .skills, .projects, .contact {
+            margin: 20px 0;
+            opacity: 0;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        .about {
+            animation-delay: 0.5s;
+        }
+
+        .skills {
+            animation-delay: 1s;
+        }
+
+        .projects {
+            animation-delay: 1.5s;
+        }
+
+        .contact {
+            animation-delay: 2s;
+        }
+
+        h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background: #e74c3c;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills ul li {
+            background: #34495e;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .skills ul li:hover {
+            transform: translateY(-5px);
+            background: #3b5998;
+        }
+
+        .projects .project {
+            background: #34495e;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s, transform 0.3s;
+            animation: slideIn 2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .projects .project:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            background: #3b5998;
+        }
+
+        .projects .project h3 {
+            margin-top: 0;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact form input, .contact form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s, background-color 0.3s;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .contact form input:focus, .contact form textarea:focus {
+            border-color: #2980b9;
+            outline: none;
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+
+        .contact form button {
+            padding: 10px;
+            background: #e74c3c;
+            color: #ecf0f1;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            border-radius: 5px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .contact form button:hover {
+            background: #c0392b;
+        }
+
+        .contact-details {
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 10px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a Python developer who has created a popular bot named GUY. I'm also skilled in HTML, CSS, JavaScript, and Python.</p>
+        </section>
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project" onclick="window.location.href='https://discordapp.com/users/1221440545197396119'">
+                <h3>GUY Bot</h3>
+                <p>A popular bot that automates various tasks and provides useful functionalities. Built with Python.</p>
+            </div>
+            <div class="project" onclick="window.location.href='https://adthoughtsglobal.github.io/Nova-OS/'">
+                <h3>Nova-OS (Developer)</h3>
+                <p>I am a developer of Nova-OS. Check it out here! It's fully client-side and made with my friends! Dark Dot, Felix, and Me! FunSparkTV</p>
+            </div>
+            <div class="project" onclick="window.location.href='WIP'">
+                <h3>Custom AI</h3>
+                <p>I am working on an AI that works by searching for answers online. It is fully made with Python.</p>
+            </div>
+            <div class="project" onclick="window.location.href='https://github.com/funsparktv-ai/nova-chess'">
+                <h3>Nova-Chess</h3>
+                <p>An App made for NovaOS. Made with Html, Css and JS</p>
+            </div>
+            <div class="project" onclick="window.location.href='https://github.com/WebFunSparkTV/NovaGames'">
+                <h3>NovaGames</h3>
+                <p>Yet another app for NovaOS built with HTML, CSS and JS!</p>
+            </div>
+            <div class="project" onclick="window.location.href='https://github.com/funsparktv-ai/funsparktv-ai'">
+                <h3>Portfolio Website</h3>
+                <p>This portfolio website showcasing my skills and projects. Built with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project" onclick="window.location.href='https://github.com/funsparktv-ai/My-Projects'">
+                <h3>My-Projects</h3>
+                <p>Smaller Projects! Click me to see the GIT. Or click the below to view!</p>
+                <div class="project" onclick="window.location.href='https://github.com/funsparktv-ai/My-Projects/blob/main/To%20Do%20List.py'">
+                    <h3>To Do List!</h3>
+                    <p>A To Do List, made in Normal Python. Click To view!</p>
+                </div>
+                <div class="project" onclick="window.location.href='https://github.com/funsparktv-ai/My-Projects/blob/main/Diary.py'">
+                    <h3>Diary!</h3>
+                    <p>A simple diary, made in python! Click To view!</p>
+                </div>
+                <div class="project" onclick="window.location.href='https://github.com/funsparktv-ai/My-Projects/blob/main/password-generator.py'">
+                    <h3>Password Generator!</h3>
+                    <p>A simple Password generator, made in python! Click To view!</p>
+                </div>
+                <div class="project" onclick="window.location.href='https://github.com/funsparktv-ai/My-Projects/blob/main/Horrorgame.py'">
+                    <h3>HorrorGame!</h3>
+                    <p>A simple HorrorGame, made in python! Click To view!</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <div class="contact-details">
+                <p>Email: <a href="mailto:fun.spark.tv.namish@gmail.com" style="color: #ecf0f1; text-decoration: underline;">fun.spark.tv.namish@gmail.com</a></p>
+                <p>Discord: <a href="https://discordapp.com/users/907299092957380698" style="color: #ecf0f1; text-decoration: underline;">FunSparkTV</a></p>
+                <p>To contact me on Discord, send me a friend request or message directly.</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
